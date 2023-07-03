@@ -7,6 +7,7 @@ public class RandomMovement : MonoBehaviour
     public float movementSpeed = 0.05f;
     public float[] movementRange = new float[2] { -0.05f, 0.05f };
     private float startYPosition;
+    public bool move = true;
 
     private void Start()
     {
