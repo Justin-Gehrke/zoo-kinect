@@ -5,10 +5,10 @@ using UnityEngine;
 public class OnHover : MonoBehaviour
 {
 public int lochID;
-GameManager gameManager;
+GameManagerAmeisen gameManager;
 
 void Start(){
-    gameManager = FindObjectOfType<GameManager>();
+    gameManager = FindObjectOfType<GameManagerAmeisen>();
 }
 
 void OnMouseOver()

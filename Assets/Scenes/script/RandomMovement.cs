@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RandomMovement : MonoBehaviour
 {
-     public float movementSpeed = 5f;
+    public float movementSpeed = 0.05f;
+    public float[] movementRange = new float[2] { -0.05f, 0.05f };
     private float startYPosition;
 
     private void Start()
@@ -37,7 +38,7 @@ public class RandomMovement : MonoBehaviour
 
     private Vector3 GetRandomPosition()
     {
-        return new Vector3(Random.Range(-20f, 20f), startYPosition, Random.Range(-20f, 20f));
+        return new Vector3(Random.Range(movementRange[0], movementRange[1]), startYPosition, Random.Range(movementRange[0], movementRange[1]));
     }
 
     private bool IsGroundBelow(Vector3 position)
